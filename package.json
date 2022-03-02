@@ -1,0 +1,23 @@
+{
+  "name": "viva-webinar",
+  "version": "1.0.0",
+  "description": "This is an HTML page for the Viva Webinar.",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel --no-cache",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "Mattia Rasulo",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.2",
+    "parcel": "latest",
+    "sharp": "^0.29.1"
+  }
+}

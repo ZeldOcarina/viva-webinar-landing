@@ -1,0 +1,34 @@
+.header {
+  padding: 2rem 0;
+  background-color: var(--white);
+
+  .container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr max-content;
+  }
+
+  &__left-container {
+    grid-template-columns: repeat(3, max-content);
+  }
+
+  &__left-container,
+  &__right-container {
+    display: grid;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__right-container {
+    grid-template-columns: repeat(2, max-content);
+  }
+
+  &__presents {
+    font-weight: $bold;
+    font-size: 2rem;
+  }
+
+  &__logo--cloud-dentistry {
+    width: 25rem;
+  }
+}

@@ -1,0 +1,85 @@
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $body-font;
+  color: var(--color-primary);
+  font-size: $basic-font-size;
+  font-weight: $semi-bold;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  background-color: var(--body-bg-color);
+
+  @include respond(phone-land) {
+    font-size: $mobile-font-size;
+  }
+}
+
+h1 {
+  font-size: $big-title;
+  font-weight: $bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title-font;
+  font-weight: $bold;
+  color: var(--color-primary);
+
+  @include respond(phone-land) {
+    font-size: $mobile-title-font-size;
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: $title-font-size;
+
+  @include respond(iphone-5) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-family: $body-font;
+  font-weight: $semi-bold;
+}
+
+p {
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+}
+
+section {
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--color-primary);
+  font-family: $body-font;
+  font-weight: $regular;
+  letter-spacing: 1px;
+}
+
+strong {
+  font-weight: $bold;
+}
+
+.subtitle {
+  color: var(--light-grey);
+  font-weight: $medium;
+  display: block;
+}

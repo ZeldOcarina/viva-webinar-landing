@@ -1,0 +1,22 @@
+.form {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+
+  &__input {
+    border-radius: 5px;
+    border: none;
+    padding: 2rem;
+
+    &::placeholder {
+      font-family: $alt-font;
+      color: #3e3e3e;
+    }
+  }
+
+  &__btn {
+    margin-right: 1rem;
+    padding: 2rem 3rem;
+    font-size: 2rem;
+  }
+}

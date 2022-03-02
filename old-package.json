@@ -1,0 +1,23 @@
+{
+  "name": "originclear-landing",
+  "version": "1.0.0",
+  "description": "An HTML landing page for Origin Clear.",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel --no-cache",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.2.1",
+    "parcel": "latest",
+    "sharp": "^0.29.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "normalize.css": "^8.0.1"
+  }
+}

@@ -1,0 +1,78 @@
+.hero {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 6rem 0;
+  display: grid;
+  justify-content: center;
+  gap: 6rem;
+
+  &__title,
+  &__subtitle {
+    color: var(--white);
+    font-family: $body-font;
+    text-transform: capitalize;
+  }
+
+  &__title {
+    margin: 0 0 0 0;
+    font-size: 4rem;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 3rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 43% 57%;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  &__left-container {
+  }
+
+  &__right-container {
+  }
+
+  &__button-container {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  &__date {
+    display: block;
+    justify-self: center;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &__seats-left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin-top: 1.5rem;
+  }
+
+  &__video-container {
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__video-subtitle {
+    text-align: center;
+    display: block;
+  }
+
+  &__countdown {
+    margin: 0 auto;
+    background-color: aqua;
+  }
+}

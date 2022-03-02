@@ -1,0 +1,33 @@
+.learn {
+  margin: 8rem auto 12rem auto;
+
+  &__title {
+    font-family: $body-font;
+    margin: 0;
+  }
+
+  .subtitle {
+    margin: 0.5rem 0 0 0;
+  }
+
+  &__ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 2rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  &__li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  &__checkmark {
+    width: 100%;
+  }
+}

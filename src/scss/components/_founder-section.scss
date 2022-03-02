@@ -1,0 +1,63 @@
+.founder-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+
+  &:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+
+  &--reverse {
+    .founder-section__left-container {
+      grid-column: 2 / 3;
+      grid-row: 1 /2;
+    }
+
+    .founder-section__right-container {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    .founder-section__logo {
+      margin-left: 0;
+    }
+  }
+
+  &__left-container {
+    display: grid;
+  }
+
+  &__right-container {
+    margin-top: 2.5rem;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__logo {
+    margin-left: auto;
+    margin-top: 1rem;
+  }
+
+  &__name,
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__name {
+    font-family: $body-font;
+    color: var(--color-secondary);
+    font-weight: $semi-bold;
+    margin: 0;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  &__paragraph {
+    font-weight: $semi-bold;
+  }
+}
