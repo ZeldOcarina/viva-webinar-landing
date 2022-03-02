@@ -1,10 +1,10 @@
-# Origin Clear Landing Page
+# Viva Webinar Landing Page
 
-This is an HTML page. It's a landing page for Origin Clear.
+This is an HTML page. It's a landing page for a webinar.
 
 ## Structure
 
-The project is plain html and scss. It's bundled with Parcel.
+The project is plain HTML and SCSS. It's bundled with Parcel.
 
 ## Install
 
