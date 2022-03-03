@@ -1,0 +1,52 @@
+.closer {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 8rem 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title,
+  &__subtitle {
+    color: var(--white);
+    margin: 0;
+    font-family: $body-font;
+    font-weight: $bold;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 6rem;
+    letter-spacing: -2px;
+  }
+
+  &__subtitle {
+    font-size: 4.2rem;
+    letter-spacing: 0;
+  }
+
+  &__logo {
+    margin: 0 auto 2rem auto;
+  }
+
+  &__btn {
+    width: max-content;
+    margin: 2rem auto;
+  }
+
+  &__seats,
+  &__date {
+    text-align: center;
+  }
+
+  &__date {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+
+  &__seats {
+    margin-bottom: 4rem;
+  }
+}

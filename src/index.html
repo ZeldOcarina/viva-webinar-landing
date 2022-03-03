@@ -297,21 +297,21 @@
           Your browser does not support the video tag.
         </video>
       </div>
-      <div class="testimonial__video-images">
+      <div class="testimonials__video-images">
         <img
           src="./assets/placeholder-small-image.png?as=webp&quality=100"
           alt="placeholder image"
-          class="testimonial__small-image"
+          class="testimonials__small-image"
         />
         <img
           src="./assets/placeholder-small-image.png?as=webp&quality=100"
           alt="placeholder image"
-          class="testimonial__small-image"
+          class="testimonials__small-image"
         />
         <img
           src="./assets/placeholder-small-image.png?as=webp&quality=100"
           alt="placeholder image"
-          class="testimonial__small-image"
+          class="testimonials__small-image"
         />
       </div>
       <div class="yellow-card">
@@ -337,42 +337,84 @@
       <div class="testimonials__brands">
         <article class="brand-card">
           <div class="brand-card__card">
-            <div class="brand-card__header">
-              <img
-                src="./assets/logos/cloud-dental-light.svg"
-                alt="Cloud Dentistry Logo"
-              />
+            <div class="brand-card__header brand-card__header--cloud-dentistry">
+              <div class="brand-card__header-content">
+                <img
+                  src="./assets/logos/cloud-dental-light.svg"
+                  alt="Cloud Dentistry Logo"
+                  class="brand-card__logo brand-card__logo--cloud-dentistry"
+                />
+              </div>
             </div>
-            <div class="brand-card__body">
-              <h4 class="brand-card__content">
-                Simpler. More efficient. Empowering.
+            <div class="brand-card__body brand-card__body--cloud-dentistry">
+              <h4
+                class="brand-card__content brand-card__content--cloud-dentistry"
+              >
+                <span class="brand-card__content--cloud-dentistry--simpler"
+                  >Simpler.</span
+                ><br />
+                <span class="brand-card__content--cloud-dentistry--efficient"
+                  >More efficient.</span
+                ><br />
+                <span class="brand-card__content--cloud-dentistry--empowering"
+                  >Empowering.</span
+                >
               </h4>
             </div>
           </div>
           <div class="brand-card__url">
-            <a href="https://www.clouddentistry.com"></a>www.clouddentistry.com
+            <a href="https://www.clouddentistry.com">www.clouddentistry.com</a>
           </div>
         </article>
         <article class="brand-card">
           <div class="brand-card__card">
-            <div class="brand-card__header">
-              <img
-                src="./assets/logos/pair-dental-blk.svg"
-                alt="Pair Dental Logo"
-              />
+            <div class="brand-card__header brand-card__header--pair-dental">
+              <div
+                class="brand-card__header-content brand-card__header-content--pair-dental"
+              >
+                <img
+                  src="./assets/logos/pair-dental-blk.svg"
+                  alt="Pair Dental Logo"
+                  class="brand-card__logo brand-card__logo--pair-dental"
+                />
+              </div>
             </div>
-            <div class="brand-card__body">
-              <h4 class="brand-card__content">
+            <div class="brand-card__body brand-card__body--pair-dental">
+              <h4 class="brand-card__content brand-card__content--pair-dental">
                 Matching Dental Practices With Traveling Specialists
               </h4>
             </div>
           </div>
           <div class="brand-card__url">
-            <a href="https://www.pairdental.com"></a>www.pairdental.com
+            <a href="https://www.pairdental.com">www.pairdental.com</a>
           </div>
         </article>
       </div>
     </section>
+    <section class="closer">
+      <div class="container">
+        <img
+          src="./assets/logos/viva-white-logo.svg"
+          alt="Viva Logo"
+          class="closer__logo"
+        />
+        <h2 class="closer__title">Follow The Exit Sign</h2>
+        <h3 class="closer__subtitle">It Spells Recurring Income</h3>
+        <span class="closer__date subtitle">April 14th 7pm EST</span>
+        <a href="#" class="closer__btn btn">REGISTER NOW</a>
+        <span class="subtitle closer__seats">Only 21 Seats Left</span>
+        <img
+          src="https://img1.niftyimages.com/3od/e_yd/qm-d"
+          class="hero__countdown"
+        />
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__copy">
+        &copy; <span id="copyright"></span> Monarchy Media LLC. All rights
+        reserved.
+      </div>
+    </footer>
     <script type="module" src="./index.js"></script>
   </body>
 </html>

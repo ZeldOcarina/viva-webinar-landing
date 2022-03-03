@@ -1,0 +1,93 @@
+$card-padding: 15%;
+$body-card-height: 35rem;
+$body-font-size: 4.3rem;
+
+.brand-card {
+  &__card {
+    border-radius: 10px;
+  }
+
+  &__header {
+    padding: 1rem 0;
+    display: grid;
+    justify-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    &--cloud-dentistry {
+      border: 1px solid #68a4d3;
+    }
+    &--pair-dental {
+      border: 1px solid var(--black);
+    }
+  }
+
+  &__logo {
+    width: 20rem;
+
+    &--cloud-dentistry {
+      width: 25rem;
+    }
+    &--pair-dental {
+      transform: translateY(4px);
+    }
+  }
+
+  &__header-content {
+    padding: 0 $card-padding;
+
+    &--pair-dental {
+      padding: 0 $card-padding;
+    }
+  }
+
+  &__logo {
+  }
+
+  &__body {
+    padding: 0 $card-padding;
+    height: $body-card-height;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: grid;
+    align-items: center;
+
+    &--cloud-dentistry {
+      background-color: #eef2f5;
+    }
+    &--pair-dental {
+      background-color: #cef2f5;
+    }
+  }
+
+  &__content {
+    margin: 0;
+    font-family: $body-font;
+    font-size: $body-font-size;
+
+    &--cloud-dentistry {
+      font-weight: $regular;
+
+      &--simpler {
+        color: #30347e;
+      }
+      &--efficient {
+        color: #2b4796;
+      }
+      &--empowering {
+        color: #3968b8;
+      }
+    }
+
+    &--pair-dental {
+      font-weight: $extra-bold;
+    }
+  }
+
+  &__url {
+    text-align: center;
+    font-family: $body-font;
+    font-weight: $regular;
+    margin-top: 2rem;
+  }
+}

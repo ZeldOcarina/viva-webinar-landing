@@ -1,0 +1,27 @@
+.yellow-card {
+  background-color: #efd291;
+  border-radius: 10px;
+  padding: 6rem;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__caption {
+    color: #b17a00;
+    width: 70%;
+  }
+
+  &__number {
+    font-family: $title-font;
+    font-weight: $semi-bold;
+    font-size: 5rem;
+  }
+}
