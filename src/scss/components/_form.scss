@@ -3,7 +3,12 @@
   gap: 1.5rem;
   margin-top: 2rem;
 
+  &__input-container {
+    width: 100%;
+  }
+
   &__input {
+    width: 100%;
     border-radius: 5px;
     border: none;
     padding: 2rem;
@@ -12,11 +17,24 @@
       font-family: $alt-font;
       color: #3e3e3e;
     }
+
+    &--error {
+      border: 5px solid darkred;
+    }
   }
 
   &__btn {
     margin-right: 1rem;
     padding: 2rem 3rem;
     font-size: 2rem;
+    cursor: pointer;
+  }
+
+  &__message {
+    color: #ca0000;
+    display: block;
+    margin-top: 0.3rem;
+    margin-left: 1rem;
+    font-weight: $regular;
   }
 }
