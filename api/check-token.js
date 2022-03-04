@@ -1,4 +1,4 @@
-import checkToken from "../helpers/checkToken";
+import checkToken from "./helpers/checkToken";
 
 export default async function checkRecaptcha(req, res) {
   try {
