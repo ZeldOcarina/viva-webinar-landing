@@ -1,7 +1,8 @@
 const { readFileSync } = require("fs");
 const { join } = require("path");
 const file = readFileSync(join(__dirname, "helpers", "checkToken.js"), "utf8");
-const checkToken = require(file);
+
+import checkToken from file;
 
 export default async function checkRecaptcha(req, res) {
   try {
