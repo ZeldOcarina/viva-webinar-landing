@@ -21,17 +21,21 @@ class FormHandler {
 
   static #handleInputError(input, message) {
     input.classList.add("form__input--error");
-    const span = this.#createMessageSpan(message);
+    const span = this.#createMessageSpan(message, false, "error");
     input.insertAdjacentElement("afterend", span);
   }
 
   static #createMessageSpan(message, isWholeFormMessage, messageType) {
+    console.log(isWholeFormMessage);
     const span = document.createElement("span");
     span.classList.add("form__message");
     isWholeFormMessage && span.classList.add("form__message--whole");
-    messageType === "success"
-      ? span.classList.add("form__message--success")
-      : span.classList.add("form__message--error");
+    isWholeFormMessage &&
+      messageType === "success" &&
+      span.classList.add("form__message--success");
+    isWholeFormMessage &&
+      !messageType === "success" &&
+      span.classList.add("form__message--error");
     span.textContent = message;
     return span;
   }
