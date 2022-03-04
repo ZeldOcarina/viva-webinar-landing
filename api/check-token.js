@@ -1,4 +1,7 @@
-import checkToken from "./helpers/checkToken";
+const { readFileSync } = require("fs");
+const { join } = require("path");
+const file = readFileSync(join(__dirname, "helpers", "checkToken.js"), "utf8");
+const checkToken = require(file);
 
 export default async function checkRecaptcha(req, res) {
   try {
