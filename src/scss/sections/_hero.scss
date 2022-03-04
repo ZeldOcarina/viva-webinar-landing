@@ -85,8 +85,8 @@ $tab-port-width: 70%;
     align-items: center;
 
     @include respond(phone-port) {
-      grid-template-columns: 1fr;
-      gap: 1rem;
+      display: block;
+      width: 100%;
     }
   }
 
@@ -167,6 +167,13 @@ $tab-port-width: 70%;
     @include respond(phone-port) {
       width: 90%;
       margin: 0 auto;
+    }
+
+    &__btn {
+      @include respond(phone-port) {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
     }
   }
 }
