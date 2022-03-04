@@ -6,7 +6,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "vercel dev",
-    "build": "vercel build",
+    "build": "parcel build",
     "dev": "parcel --no-cache"
   },
   "keywords": [],
