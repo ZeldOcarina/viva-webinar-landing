@@ -63,10 +63,15 @@ class FormHandler {
 
   disableForm() {
     const elements = this.form.elements;
-    document.removeEventListener("click", this.__proto__.constructor.#resetForm.bind(this));
-    document.removeEventListener("input", this.__proto__.constructor.#resetForm.bind(this));
-    for (let i = 0, ; i < elements.length; ++i) 
-      elements[i].disabled = true;
+    document.removeEventListener(
+      "click",
+      this.__proto__.constructor.#resetForm.bind(this)
+    );
+    document.removeEventListener(
+      "input",
+      this.__proto__.constructor.#resetForm.bind(this)
+    );
+    for (let i = 0; i < elements.length; ++i) elements[i].disabled = true;
   }
 
   async handleSubmit(e) {
