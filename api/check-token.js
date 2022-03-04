@@ -1,5 +1,5 @@
 const { join } = require("path");
-const checkToken = require(join(__dirname, "helpers", "checkToken.js"));
+const checkToken = require(join(__dirname, "helpers", "checkToken.mjs"));
 
 export default async function checkRecaptcha(req, res) {
   try {
