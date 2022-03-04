@@ -1,10 +1,22 @@
+import axios from "axios";
+
 class FormHandler {
   #emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   constructor(form) {
     this.form = form;
     this.formData = {};
+    this.isRecaptchaPassed;
     this.init();
+  }
+
+  #createWholeFormMessage(type, message) {
+    const errorSpan = this.__proto__.constructor.#createMessageSpan(
+      message,
+      true,
+      type
+    );
+    this.form.insertBefore(errorSpan, this.form.firstChild);
   }
 
   static #handleInputError(input, message) {
@@ -13,9 +25,13 @@ class FormHandler {
     input.insertAdjacentElement("afterend", span);
   }
 
-  static #createMessageSpan(message) {
+  static #createMessageSpan(message, isWholeFormMessage, messageType) {
     const span = document.createElement("span");
     span.classList.add("form__message");
+    isWholeFormMessage && span.classList.add("form__message--whole");
+    messageType === "success"
+      ? span.classList.add("form__message--success")
+      : span.classList.add("form__message--error");
     span.textContent = message;
     return span;
   }
@@ -45,11 +61,21 @@ class FormHandler {
     );
   }
 
-  handleSubmit(e) {
+  disableForm() {
+    const elements = this.form.elements;
+    document.removeEventListener("click", this.__proto__.constructor.#resetForm.bind(this));
+    document.removeEventListener("input", this.__proto__.constructor.#resetForm.bind(this));
+    for (let i = 0, ; i < elements.length; ++i) 
+      elements[i].disabled = true;
+  }
+
+  async handleSubmit(e) {
     e.preventDefault();
+    console.log("Validating form");
     const isFormValid = this.validateForm();
     if (!isFormValid) return;
-    this.sendForm();
+    console.log("sending form");
+    this.checkRecaptchaAndSubmit();
   }
 
   validateForm() {
@@ -106,15 +132,54 @@ class FormHandler {
         first_name: firstName,
         last_name: lastName,
         email: emailInput.value,
-        phone: phoneNumberInput.value,
+        phone_number: phoneNumberInput.value,
       };
       return true;
     }
     return false;
   }
 
-  sendForm() {
-    console.log("FORM IS BEING SENT!!!");
+  checkRecaptchaAndSubmit() {
+    window.onSubmit = async function () {
+      console.log("hitting onsubmit");
+      const recaptchaResponse = window.grecaptcha.getResponse();
+      try {
+        const response = await axios.post("/api/check-token", {
+          token: recaptchaResponse,
+        });
+        if (response.status === 403) throw new Error("Invalid recaptcha");
+
+        console.log(this.formData);
+
+        const salesJetResponse = await axios.post(
+          "https://sj-api.com/externalapp/track",
+          {
+            event_name: "webinar_registration",
+            contact: this.formData,
+          },
+          {
+            headers: {
+              "content-type": "application/json",
+              Authorization: process.env.SALESJET_API_KEY,
+            },
+          }
+        );
+        console.dir(salesJetResponse);
+        this.#createWholeFormMessage(
+          "success",
+          "You have been correctly registered. Thank you!"
+        );
+        this.disableForm();
+      } catch (err) {
+        console.dir(err);
+        if (err.response.status === 403 || err.message === "Invalid recaptcha")
+          this.#createWholeFormMessage(
+            "error",
+            "Invalid recaptcha. Are you sure you are a human?"
+          );
+      }
+    }.bind(this);
+    window.grecaptcha.execute();
   }
 }
 

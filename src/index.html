@@ -16,6 +16,7 @@
     />
 
     <link rel="stylesheet" href="./scss/index.scss" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Viva Concepts Webinar</title>
   </head>
   <body>
@@ -458,6 +459,12 @@
         reserved.
       </div>
     </footer>
+    <div
+      class="g-recaptcha"
+      data-sitekey=""
+      data-callback="onSubmit"
+      data-size="invisible"
+    ></div>
     <script type="module" src="./index.js"></script>
   </body>
 </html>

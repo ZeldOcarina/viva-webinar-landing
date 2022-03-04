@@ -1,5 +1,6 @@
-import "./js/footer-date.js";
-import FormHandler from "./js/form-submittion.js";
+import "./js/footer-date";
+import "./js/create-recaptcha";
+import FormHandler from "./js/form-submittion";
 
 function initApp() {
   const forms = document.querySelectorAll(".form");

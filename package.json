@@ -5,19 +5,24 @@
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel --no-cache",
-    "build": "parcel build"
+    "start": "vercel dev",
+    "build": "vercel build",
+    "dev": "parcel --no-cache"
   },
   "keywords": [],
   "author": "Mattia Rasulo",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.26.0",
     "bootstrap": "^5.1.3",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.3.2",
+    "npm-run-all": "^4.1.5",
     "parcel": "latest",
-    "sharp": "^0.29.1"
+    "process": "^0.11.10",
+    "sharp": "^0.29.1",
+    "vercel": "^24.0.0"
   }
 }
