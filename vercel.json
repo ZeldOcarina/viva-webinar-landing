@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/check-token.js": {
+      "includeFiles": "_files/**"
+    }
+  }
+}
