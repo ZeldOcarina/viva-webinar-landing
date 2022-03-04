@@ -6,12 +6,29 @@
   @include respond(small-tab-port) {
     padding: 3rem;
   }
+  @include respond(phone-land) {
+    padding: 2rem;
+  }
+  @include respond(phone-port) {
+    width: 70%;
+    margin: 0 auto;
+  }
+  @include respond(iphone-5) {
+    width: 80%;
+  }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
+
+    @include respond(phone-port) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 1rem;
+      padding: 0;
+    }
   }
 
   &__item {
@@ -25,11 +42,18 @@
     @include respond(small-tab-port) {
       width: 90%;
     }
+    @include respond(phone-port) {
+      margin: 0 auto;
+    }
   }
 
   &__number {
     font-family: $title-font;
     font-weight: $semi-bold;
     font-size: 5rem;
+
+    @include respond(phone-land) {
+      font-size: 3.8rem;
+    }
   }
 }

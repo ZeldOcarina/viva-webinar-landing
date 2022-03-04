@@ -1,13 +1,26 @@
 .learn {
   margin: 8rem auto 12rem auto;
 
+  @include respond(phone-port) {
+    padding: 0;
+    margin: 8rem auto;
+  }
+
   &__title {
     font-family: $body-font;
     margin: 0;
+
+    @include respond(phone-port) {
+      margin-left: 1rem;
+    }
   }
 
   .subtitle {
     margin: 0.5rem 0 0 0;
+
+    @include respond(phone-port) {
+      margin-left: 1rem;
+    }
   }
 
   &__ul {
@@ -17,6 +30,13 @@
     row-gap: 2rem;
     align-items: center;
     margin-top: 3rem;
+
+    @include respond(phone-port) {
+      padding: 0;
+      grid-template-columns: 1fr;
+      width: 90%;
+      margin: 3rem auto 0 auto;
+    }
   }
 
   &__li {

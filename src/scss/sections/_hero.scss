@@ -9,6 +9,12 @@ $tab-port-width: 70%;
   gap: 6rem;
   box-sizing: border-box;
 
+  .container {
+    @include respond(phone-port) {
+      padding: 0;
+    }
+  }
+
   &__title,
   &__subtitle {
     color: var(--white);
@@ -24,12 +30,29 @@ $tab-port-width: 70%;
     margin: 0 0 0 0;
     font-size: 5.5rem;
     letter-spacing: -2px;
+
+    @include respond(phone-land) {
+      font-size: 5rem;
+    }
+    @include respond(phone-port) {
+      font-size: 4rem;
+    }
+    @include respond(iphone-5) {
+      font-size: 3.1rem;
+    }
   }
 
   &__subtitle {
     margin: 0;
     font-size: 3rem;
     letter-spacing: 0;
+
+    @include respond(phone-port) {
+      font-size: 2.6rem;
+    }
+    @include respond(iphone-5) {
+      font-size: 2.1rem;
+    }
   }
 
   &__container {
@@ -60,6 +83,11 @@ $tab-port-width: 70%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+
+    @include respond(phone-port) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
   }
 
   &__date {
@@ -95,6 +123,11 @@ $tab-port-width: 70%;
         width: 100%;
         margin: 2rem auto;
       }
+      @include respond(phone-port) {
+        display: block;
+        width: 100%;
+        margin: 2rem auto;
+      }
     }
 
     &--desktop {
@@ -119,11 +152,20 @@ $tab-port-width: 70%;
   &__countdown {
     margin: 0 auto;
     background-color: aqua;
+    max-width: 90%;
   }
 
   .form {
     @include respond(tab-port) {
       width: $tab-port-width;
+      margin: 0 auto;
+    }
+    @include respond(phone-land) {
+      width: 100%;
+      margin: 0 auto;
+    }
+    @include respond(phone-port) {
+      width: 90%;
       margin: 0 auto;
     }
   }

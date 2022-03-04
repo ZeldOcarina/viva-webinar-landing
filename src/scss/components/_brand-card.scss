@@ -7,6 +7,15 @@ $tab-port-body-font-size: 3.7rem;
 .brand-card {
   &__card {
     border-radius: 10px;
+
+    @include respond(phone-port) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include respond(iphone-5) {
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 
   &__header {
@@ -15,6 +24,11 @@ $tab-port-body-font-size: 3.7rem;
     justify-items: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+
+    @include respond(phone-land) {
+      display: flex;
+      justify-content: center;
+    }
 
     &--cloud-dentistry {
       border: 1px solid #68a4d3;
@@ -37,6 +51,10 @@ $tab-port-body-font-size: 3.7rem;
 
   &__header-content {
     padding: 0 $card-padding;
+
+    @include respond(phone-land) {
+      padding: 0;
+    }
 
     &--pair-dental {
       padding: 0 $card-padding;

@@ -1,16 +1,29 @@
 .testimonials {
   margin: 6rem auto;
 
+  @include respond(phone-port) {
+    padding: 0;
+  }
+
   &__title,
   &__subtitle {
     text-align: center;
   }
   &__title {
     margin: 0 0 1rem 0;
+    @include respond(phone-port) {
+      width: 90%;
+      margin: 0 auto 1rem auto;
+      font-size: 3rem;
+    }
   }
   &__subtitle {
     width: 50%;
     margin: 0 auto;
+
+    @include respond(phone-port) {
+      width: 90%;
+    }
   }
 
   &__stars {
@@ -19,6 +32,13 @@
     grid-template-columns: repeat(5, max-content);
     gap: 4rem;
     justify-content: center;
+
+    @include respond(phone-port) {
+      gap: 2rem;
+    }
+    @include respond(iphone-5) {
+      gap: 1rem;
+    }
   }
 
   &__star {
@@ -39,10 +59,26 @@
     grid-template-columns: repeat(3, 1fr);
     gap: $gutter;
     margin-bottom: 6rem;
+
+    @include respond(phone-land) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__small-image {
     width: 100%;
+
+    @include respond(phone-land) {
+      width: 47%;
+    }
+    @include respond(phone-port) {
+      width: 80%;
+    }
+    @include respond(iphone-5) {
+      width: 90%;
+    }
   }
 
   &__brands {
@@ -50,5 +86,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
+
+    @include respond(phone-land) {
+      grid-template-columns: 1fr;
+    }
   }
 }

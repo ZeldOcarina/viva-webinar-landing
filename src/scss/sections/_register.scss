@@ -3,9 +3,19 @@
   position: relative;
   text-align: center;
 
+  .container {
+    @include respond(phone-port) {
+      padding: 0;
+    }
+  }
+
   &__title {
     color: var(--white);
     margin: 0 0 0.8rem 0;
+
+    @include respond(small-phone) {
+      font-size: 3rem;
+    }
   }
 
   &__subtitle {
@@ -16,10 +26,24 @@
     width: 50%;
     margin: 0 auto;
 
+    @include respond(phone-land) {
+      width: 70%;
+    }
+    @include respond(phone-port) {
+      width: 80%;
+    }
+    @include respond(small-phone) {
+      width: 90%;
+    }
+
     .form__btn {
       width: max-content;
       margin: 1.5rem auto 1.5rem auto;
       padding: 2rem 6rem;
+
+      @include respond(phone-port) {
+        width: 100%;
+      }
     }
   }
 
@@ -28,6 +52,7 @@
 
   &__countdown {
     margin-top: 4rem;
+    max-width: 90%;
   }
 
   &__background {

@@ -17,6 +17,23 @@
       justify-content: center;
       align-items: center;
     }
+    @include respond(phone-port) {
+      padding: 0;
+    }
+  }
+
+  &__left-container,
+  &__right-container {
+    display: grid;
+    align-items: center;
+    gap: 3rem;
+
+    @include respond(tab-land) {
+      gap: 2rem;
+    }
+    @include respond(iphone-5) {
+      gap: 1rem;
+    }
   }
 
   &__left-container {
@@ -30,16 +47,8 @@
     @include respond(small-tab-port) {
       grid-row: 2 / 3;
     }
-  }
-
-  &__left-container,
-  &__right-container {
-    display: grid;
-    align-items: center;
-    gap: 3rem;
-
-    @include respond(tab-land) {
-      gap: 2rem;
+    @include respond(phone-port) {
+      display: flex;
     }
   }
 
@@ -57,13 +66,25 @@
     font-size: 2rem;
   }
 
-  &__logo--cloud-dentistry {
-    width: 25rem;
-
-    @include respond(tab-land) {
-      width: 20rem;
+  &__logo {
+    @include respond(small-phone) {
+      width: 14rem;
     }
-    @include respond(tab-port) {
+    @include respond(iphone-5) {
+      width: 12rem;
+    }
+    &--cloud-dentistry {
+      width: 25rem;
+
+      @include respond(tab-land) {
+        width: 20rem;
+      }
+      @include respond(small-phone) {
+        width: 18rem;
+      }
+      @include respond(iphone-5) {
+        width: 16rem;
+      }
     }
   }
 }

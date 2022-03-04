@@ -6,6 +6,10 @@
   .container {
     display: flex;
     flex-direction: column;
+
+    @include respond(phone-port) {
+      padding: 0;
+    }
   }
 
   &__title,
@@ -20,11 +24,31 @@
   &__title {
     font-size: 6rem;
     letter-spacing: -2px;
+
+    @include respond(phone-land) {
+      font-size: 5rem;
+    }
+    @include respond(phone-port) {
+      font-size: 4rem;
+    }
+    @include respond(iphone-5) {
+      font-size: 3rem;
+    }
   }
 
   &__subtitle {
     font-size: 4.2rem;
     letter-spacing: 0;
+
+    @include respond(phone-land) {
+      font-size: 3.6rem;
+    }
+    @include respond(phone-port) {
+      font-size: 2.75rem;
+    }
+    @include respond(iphone-5) {
+      font-size: 2rem;
+    }
   }
 
   &__logo {
@@ -36,6 +60,21 @@
     margin: 3rem auto;
     font-size: 4rem;
     padding: 2rem 4rem;
+
+    @include respond(phone-port) {
+      padding: 2rem 3rem;
+    }
+    @include respond(small-phone) {
+      width: 90%;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    @include respond(iphone-5) {
+      font-size: 3rem;
+      width: 90%;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
   }
 
   &__seats,
@@ -46,6 +85,10 @@
   &__date {
     margin-top: 2rem;
     font-size: 3rem;
+
+    @include respond(iphone-5) {
+      font-size: 2rem;
+    }
   }
 
   &__seats {

@@ -1,3 +1,9 @@
 .founders {
   margin: 8rem auto;
+
+  @include respond(phone-port) {
+    margin: 8rem auto;
+    padding: 0;
+    width: 90%;
+  }
 }
