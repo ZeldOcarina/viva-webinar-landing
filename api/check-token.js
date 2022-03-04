@@ -1,5 +1,4 @@
-const { join } = require("path");
-const checkToken = require(join(__dirname, "helpers", "checkToken.cjs"));
+import checkToken from "./helpers/checkToken";
 
 export default async function checkRecaptcha(req, res) {
   try {
