@@ -1,15 +1,35 @@
 .header {
   padding: 2rem 0;
   background-color: var(--white);
+  width: auto;
 
   .container {
     display: grid;
     justify-content: space-between;
     grid-template-columns: 1fr max-content;
+
+    @include respond(tab-port) {
+      justify-content: center;
+    }
+    @include respond(small-tab-port) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__left-container {
     grid-template-columns: repeat(3, max-content);
+
+    @include respond(tab-port) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include respond(small-tab-port) {
+      grid-row: 2 / 3;
+    }
   }
 
   &__left-container,
@@ -17,10 +37,19 @@
     display: grid;
     align-items: center;
     gap: 3rem;
+
+    @include respond(tab-land) {
+      gap: 2rem;
+    }
   }
 
   &__right-container {
     grid-template-columns: repeat(2, max-content);
+
+    @include respond(small-tab-port) {
+      justify-items: center;
+      justify-content: center;
+    }
   }
 
   &__presents {
@@ -30,5 +59,11 @@
 
   &__logo--cloud-dentistry {
     width: 25rem;
+
+    @include respond(tab-land) {
+      width: 20rem;
+    }
+    @include respond(tab-port) {
+    }
   }
 }

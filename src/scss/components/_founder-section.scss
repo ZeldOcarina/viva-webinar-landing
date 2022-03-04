@@ -3,6 +3,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 6rem;
 
+  @include respond(small-tab-port) {
+    display: block;
+  }
+
   &:not(:last-child) {
     margin-bottom: 6rem;
   }
@@ -25,6 +29,10 @@
 
   &__left-container {
     display: grid;
+
+    @include respond(tab-port) {
+      display: block;
+    }
   }
 
   &__right-container {

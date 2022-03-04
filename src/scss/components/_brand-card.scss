@@ -1,6 +1,8 @@
 $card-padding: 15%;
 $body-card-height: 35rem;
+$tab-port-card-height: 40rem;
 $body-font-size: 4.3rem;
+$tab-port-body-font-size: 3.7rem;
 
 .brand-card {
   &__card {
@@ -52,6 +54,13 @@ $body-font-size: 4.3rem;
     display: grid;
     align-items: center;
 
+    @include respond(tab-port) {
+      height: $tab-port-card-height;
+    }
+    @include respond(small-tab-port) {
+      height: 35rem;
+    }
+
     &--cloud-dentistry {
       background-color: #eef2f5;
     }
@@ -64,6 +73,13 @@ $body-font-size: 4.3rem;
     margin: 0;
     font-family: $body-font;
     font-size: $body-font-size;
+
+    @include respond(tab-port) {
+      font-size: $tab-port-body-font-size;
+    }
+    @include respond(small-tab-port) {
+      font-size: 3rem;
+    }
 
     &--cloud-dentistry {
       font-weight: $regular;

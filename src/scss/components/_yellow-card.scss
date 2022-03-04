@@ -3,6 +3,10 @@
   border-radius: 10px;
   padding: 6rem;
 
+  @include respond(small-tab-port) {
+    padding: 3rem;
+  }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -17,6 +21,10 @@
   &__caption {
     color: #b17a00;
     width: 70%;
+
+    @include respond(small-tab-port) {
+      width: 90%;
+    }
   }
 
   &__number {

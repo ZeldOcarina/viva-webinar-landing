@@ -1,3 +1,5 @@
+$tab-port-width: 70%;
+
 .hero {
   background-color: var(--black);
   color: var(--white);
@@ -5,12 +7,17 @@
   display: grid;
   justify-content: center;
   gap: 6rem;
+  box-sizing: border-box;
 
   &__title,
   &__subtitle {
     color: var(--white);
     font-family: $body-font;
     text-transform: capitalize;
+
+    @include respond(tab-port) {
+      text-align: center;
+    }
   }
 
   &__title {
@@ -31,6 +38,15 @@
     gap: 6rem;
     align-items: center;
     justify-content: center;
+
+    @include respond(tab-land) {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
   }
 
   &__left-container {
@@ -59,9 +75,35 @@
     align-items: center;
     justify-items: center;
     margin-top: 1.5rem;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__video-container {
+    &--tab {
+      display: none;
+
+      @include respond(tab-port) {
+        display: block;
+        width: $tab-port-width;
+        margin: 2rem auto;
+      }
+      @include respond(small-tab-port) {
+        display: block;
+        width: 100%;
+        margin: 2rem auto;
+      }
+    }
+
+    &--desktop {
+      display: block;
+
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
   }
 
   &__video {
@@ -77,5 +119,12 @@
   &__countdown {
     margin: 0 auto;
     background-color: aqua;
+  }
+
+  .form {
+    @include respond(tab-port) {
+      width: $tab-port-width;
+      margin: 0 auto;
+    }
   }
 }

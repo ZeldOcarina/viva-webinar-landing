@@ -31,10 +31,15 @@ ORDER: Base + typography > General layout + grid > page layout > components
     } // 820px
   }
 
-  @if $breakpoint == tab-port {
-    @media only screen and (max-width: 56.25em) {
+  @if $breakpoint == small-tab-port {
+    @media only screen and (max-width: 52.125em) {
       @content;
-    } // 900px
+    } // 834px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 64em) {
+      @content;
+    } // 1024px
   }
 
   @if $breakpoint == tab-land {

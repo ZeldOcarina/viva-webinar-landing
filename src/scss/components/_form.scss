@@ -3,6 +3,18 @@
   gap: 1.5rem;
   margin-top: 2rem;
 
+  &__cta {
+    color: var(--white);
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    display: none;
+
+    @include respond(tab-port) {
+      display: block;
+    }
+  }
+
   &__input-container {
     width: 100%;
   }
@@ -12,6 +24,7 @@
     border-radius: 5px;
     border: none;
     padding: 2rem;
+    box-sizing: border-box;
 
     &::placeholder {
       font-family: $alt-font;
