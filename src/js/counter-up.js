@@ -13,7 +13,7 @@ const callback = (entries) => {
         delay: 16,
       });
       counterUp(secondEl, {
-        duration: 1000,
+        duration: 700,
         delay: 16,
       });
       counterUp(thirdEl, {
