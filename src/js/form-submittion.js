@@ -26,7 +26,6 @@ class FormHandler {
   }
 
   static #createMessageSpan(message, isWholeFormMessage, messageType) {
-    console.log(isWholeFormMessage);
     const span = document.createElement("span");
     span.classList.add("form__message");
     isWholeFormMessage && span.classList.add("form__message--whole");
@@ -80,10 +79,9 @@ class FormHandler {
 
   async handleSubmit(e) {
     e.preventDefault();
-    console.log("Validating form");
+
     const isFormValid = this.validateForm();
     if (!isFormValid) return;
-    console.log("sending form");
     this.checkRecaptchaAndSubmit();
   }
 

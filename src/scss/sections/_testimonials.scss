@@ -47,7 +47,12 @@
 
   $gutter: 3rem;
   &__video-container {
-    margin-bottom: $gutter;
+    width: 50%;
+    margin: 0 auto $gutter auto;
+
+    @include respond(phone-port) {
+      width: 80%;
+    }
   }
 
   &__video {
