@@ -89,9 +89,13 @@
   &__brands {
     margin: 6rem auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 4rem;
+    width: 50%;
 
+    @include respond(tab-land) {
+      width: 60%;
+    }
     @include respond(phone-land) {
       grid-template-columns: 1fr;
     }

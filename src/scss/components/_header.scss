@@ -73,6 +73,9 @@
     @include respond(iphone-5) {
       width: 12rem;
     }
+    &--viva {
+      width: 10rem;
+    }
     &--cloud-dentistry {
       width: 25rem;
 
