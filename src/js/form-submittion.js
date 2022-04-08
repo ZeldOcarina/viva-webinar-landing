@@ -172,6 +172,7 @@ class FormHandler {
           }
         );
         console.dir(salesJetResponse);
+        window.fbq("track", "CompleteRegistration");
         this.#createWholeFormMessage(
           "success",
           "You have been correctly registered. Thank you!"
